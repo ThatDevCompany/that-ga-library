@@ -1,2 +1,2 @@
 # that-ga-thing
-A Microbial Genetic Algorithm for Typescript
+A Genetic Algorithm library for Typescript
