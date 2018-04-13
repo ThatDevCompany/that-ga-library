@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7450a8f-170a-48fd-83e1-7dc0c4d9a0eb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GA.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GACitizen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <ignored path="wwwxi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +29,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tsconfig.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tsconfig.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -197,9 +210,9 @@
         <option value="$PROJECT_DIR$/.istanbul.yml" />
         <option value="$PROJECT_DIR$/src/GA.spec.ts" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/src/GA.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/tsconfig.json" />
       </list>
     </option>
   </component>
@@ -243,11 +256,6 @@
             <path>
               <item name="that-ga-library" type="b2602c69:ProjectViewProjectNode" />
               <item name="that-ga-library" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="that-ga-library" type="b2602c69:ProjectViewProjectNode" />
-              <item name="that-ga-library" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -518,7 +526,8 @@
       <workItem from="1523331462773" duration="292000" />
       <workItem from="1523358205089" duration="84000" />
       <workItem from="1523358318170" duration="26000" />
-      <workItem from="1523614298281" duration="1586000" />
+      <workItem from="1523614298281" duration="2211000" />
+      <workItem from="1523626530110" duration="133000" />
     </task>
     <task id="LOCAL-00003" summary="Added some styling">
       <created>1476680849139</created>
@@ -867,7 +876,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="350024000" />
+    <option name="totallyTimeSpent" value="350782000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -883,17 +892,17 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="8" sideWeight="0.48696265" weight="0.32848486" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.79777366" visible="true" weight="0.27272728" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.79777366" visible="true" weight="0.27272728" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49964765" weight="0.32848486" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.4918957" side_tool="true" weight="0.34666666" />
-      <window_info id="npm" order="4" sideWeight="0.20222634" weight="0.27272728" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.50880903" visible="true" weight="0.34666666" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.48696265" side_tool="true" weight="0.34666666" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.50951374" visible="true" weight="0.34666666" />
+      <window_info id="npm" order="4" sideWeight="0.20222634" weight="0.27272728" />
       <window_info id="Structure" order="3" show_stripe_button="false" side_tool="true" weight="0.24929178" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49048626" side_tool="true" visible="true" weight="0.34666666" />
-      <window_info auto_hide="true" id="Favorites" internal_type="SLIDING" order="2" show_stripe_button="false" sideWeight="0.19911504" side_tool="true" type="SLIDING" weight="0.2967422" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49119097" side_tool="true" visible="true" weight="0.34666666" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39972898" />
+      <window_info auto_hide="true" id="Favorites" internal_type="SLIDING" order="2" show_stripe_button="false" sideWeight="0.19911504" side_tool="true" type="SLIDING" weight="0.2967422" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -905,49 +914,31 @@
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.46954674" weight="0.44" />
     </layout>
     <layout-to-restore>
-      <window_info id="Grunt " order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3292683" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="4" sideWeight="0.59070796" weight="0.17829457" />
       <window_info anchor="bottom" id="Run" order="5" sideWeight="0.5084986" visible="true" weight="0.38857144" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.80088496" visible="true" weight="0.1564482" />
       <window_info id="Structure" order="3" show_stripe_button="false" side_tool="true" weight="0.24929178" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3292683" />
       <window_info anchor="bottom" id="TypeScript" order="8" sideWeight="0.49150142" weight="0.32857144" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.46954674" weight="0.44" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39972898" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3306233" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.3292683" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5056657" side_tool="true" weight="0.3292683" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3292683" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.3306233" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.46954674" weight="0.44" />
+      <window_info id="Grunt " order="1" side_tool="true" />
       <window_info auto_hide="true" id="Favorites" internal_type="SLIDING" order="2" show_stripe_button="false" sideWeight="0.19911504" side_tool="true" type="SLIDING" weight="0.2967422" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/GA.js" />
-        <option value="$PROJECT_DIR$/src/GACitizen.js" />
-        <option value="$PROJECT_DIR$/src/GA.spec.js" />
-        <option value="$PROJECT_DIR$/../that-ts-library/src/mixins/component/index.js" />
-        <option value="$PROJECT_DIR$/../that-ts-library/src/mixins/component/Playable.js" />
-        <option value="$PROJECT_DIR$/../that-ts-library/src/mixins/component/Resizable.js" />
-        <option value="$PROJECT_DIR$/../that-ts-library/src/mixins/model/index.js" />
-        <option value="$PROJECT_DIR$/../that-ts-library/src/mixins/model/Jsonable.js" />
-        <option value="$PROJECT_DIR$/../that-ts-library/src/mixins/model/Identifiable.js" />
-        <option value="$PROJECT_DIR$/../that-ts-library/src/index.js" />
-        <option value="$PROJECT_DIR$/../that-ts-library/src/mixins/index.js" />
-        <option value="$PROJECT_DIR$/../that-ts-library/src/mixins/Constructor.js" />
-        <option value="$PROJECT_DIR$/../that-ts-library/src/mixins/Constructor.spec.js" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -1167,13 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GA.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5">
@@ -1185,6 +1169,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
         </state>
       </provider>
     </entry>

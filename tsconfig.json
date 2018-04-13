@@ -1,15 +1,19 @@
 {
-    "compileOnSave": true,
-    "compilerOptions": {
-        "target": "es5",
-        "typeRoots": [
-            "./node_modules/@types"
-        ],
-        "types": [
-            "jasmine"
-        ]
-    },
-    "exclude": [
-        "./node_modules/*"
-    ]
+	"compileOnSave": false,
+	"compilerOptions": {
+		"outDir": "./",
+		"target": "es5",
+		"sourceMap": false,
+		"declaration": true,
+		"typeRoots": [
+			"./node_modules/@types"
+		],
+		"types": [
+			"jasmine"
+		]
+	},
+	"exclude": [
+		"*.d.ts",
+		"./node_modules/*"
+	]
 }
