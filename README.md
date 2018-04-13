@@ -1,4 +1,4 @@
-# That GA Thing
+# That GA Library
 A Genetic Algorithm library for Typescript
 
 #### Package Contents

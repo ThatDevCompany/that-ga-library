@@ -1,11 +1,11 @@
 {
-	"name": "that-ga-thing",
+	"name": "that-ga-library",
 	"description": "A Genetic Algorithm library for Typescript",
 	"version": "0.0.1",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ThatDevCompany/that-ga-thing.git"
+		"url": "https://github.com/ThatDevCompany/that-ga-library.git"
 	},
 	"contributors": [
 		"Stephen James <steve@thatdevcompany.com> (http://thatdevcompany.com)"
