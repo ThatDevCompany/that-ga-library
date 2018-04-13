@@ -5,7 +5,6 @@ instrumentation:
         - .js
     default-excludes: true
     excludes:
-        - config/**
         - coverage/**
         - nodule_modules/**
     embed-source: false

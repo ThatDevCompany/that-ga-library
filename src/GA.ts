@@ -63,7 +63,9 @@ export class GA<T extends GACitizen> {
 		// Create Breeding Pool
 		let breeders: Array<T> = [];
 		this.population.forEach((citizen: T, idx: number) => {
-			breeders = breeders.concat(Array(populationSize - idx).fill(citizen));
+			Array(populationSize - idx).forEach(() => {
+				breeders.push(citizen);
+			});
 		});
 
 		// Keep the Best
