@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7450a8f-170a-48fd-83e1-7dc0c4d9a0eb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/GA.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GA.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GACitizen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webResources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/GA.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/GA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA.spec.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/GA.spec.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/GA.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GACitizen.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/GACitizen.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GACitizen.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/GACitizen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <ignored path="wwwxi.iws" />
@@ -28,26 +35,7 @@
     <favorites_list name="wwwxi" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tsconfig.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tsconfig.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -209,10 +197,10 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.istanbul.yml" />
         <option value="$PROJECT_DIR$/src/GA.spec.ts" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/GA.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -294,19 +282,19 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/common/polymer" />
-      <recent name="$PROJECT_DIR$/src/client/angular" />
-      <recent name="$PROJECT_DIR$/dist" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dist" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/" />
-      <recent name="$PROJECT_DIR$/src/client/images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tools" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/common/polymer" />
+      <recent name="$PROJECT_DIR$/src/client/angular" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -404,15 +392,6 @@
       <node-interpreter value="project" />
       <envs />
     </configuration>
-    <configuration name="build:watch" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build:watch" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-    </configuration>
     <configuration name="cover" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -427,6 +406,15 @@
       <command value="run" />
       <scripts>
         <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+    </configuration>
+    <configuration name="publish" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="publish" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -464,19 +452,19 @@
       <item itemvalue="npm.Run" />
       <item itemvalue="npm.Build" />
       <item itemvalue="npm.Deploy" />
-      <item itemvalue="npm.build:watch" />
       <item itemvalue="npm.start" />
       <item itemvalue="npm.lint" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.cover" />
+      <item itemvalue="npm.publish" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.lint" />
+        <item itemvalue="npm.publish" />
         <item itemvalue="npm.test" />
+        <item itemvalue="npm.lint" />
         <item itemvalue="npm.cover" />
         <item itemvalue="npm.start" />
-        <item itemvalue="npm.build:watch" />
       </list>
     </recent_temporary>
   </component>
@@ -527,7 +515,8 @@
       <workItem from="1523358205089" duration="84000" />
       <workItem from="1523358318170" duration="26000" />
       <workItem from="1523614298281" duration="2211000" />
-      <workItem from="1523626530110" duration="133000" />
+      <workItem from="1523626530110" duration="1683000" />
+      <workItem from="1523714765545" duration="166000" />
     </task>
     <task id="LOCAL-00003" summary="Added some styling">
       <created>1476680849139</created>
@@ -876,7 +865,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="350782000" />
+    <option name="totallyTimeSpent" value="352498000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -889,18 +878,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="8" sideWeight="0.48696265" weight="0.32848486" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.79777366" visible="true" weight="0.27272728" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.79777366" visible="true" weight="0.27272728" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49964765" weight="0.32848486" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.4918957" side_tool="true" weight="0.34666666" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.50880903" visible="true" weight="0.34666666" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.48696265" side_tool="true" weight="0.34666666" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.5081043" visible="true" weight="0.34666666" />
       <window_info id="npm" order="4" sideWeight="0.20222634" weight="0.27272728" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.48696265" side_tool="true" weight="0.34666666" />
       <window_info id="Structure" order="3" show_stripe_button="false" side_tool="true" weight="0.24929178" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49119097" side_tool="true" visible="true" weight="0.34666666" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4918957" side_tool="true" visible="true" weight="0.34666666" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39972898" />
       <window_info auto_hide="true" id="Favorites" internal_type="SLIDING" order="2" show_stripe_button="false" sideWeight="0.19911504" side_tool="true" type="SLIDING" weight="0.2967422" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -914,31 +902,37 @@
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.46954674" weight="0.44" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3292683" />
+      <window_info id="Grunt " order="1" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="4" sideWeight="0.59070796" weight="0.17829457" />
       <window_info anchor="bottom" id="Run" order="5" sideWeight="0.5084986" visible="true" weight="0.38857144" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.80088496" visible="true" weight="0.1564482" />
       <window_info id="Structure" order="3" show_stripe_button="false" side_tool="true" weight="0.24929178" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3292683" />
       <window_info anchor="bottom" id="TypeScript" order="8" sideWeight="0.49150142" weight="0.32857144" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.46954674" weight="0.44" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39972898" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.3306233" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.3292683" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5056657" side_tool="true" weight="0.3292683" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.46954674" weight="0.44" />
-      <window_info id="Grunt " order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3292683" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3306233" />
       <window_info auto_hide="true" id="Favorites" internal_type="SLIDING" order="2" show_stripe_button="false" sideWeight="0.19911504" side_tool="true" type="SLIDING" weight="0.2967422" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../tdc-sample-app/src/server/models/systemUserDef.js" />
+        <option value="$PROJECT_DIR$/../tdc-sample-app/src/server/bootscripts/appconstants.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -1030,13 +1024,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1137,13 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="150" selection-start-line="16" selection-start-column="150" selection-end-line="16" selection-end-column="150" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.istanbul.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1175,7 +1155,21 @@
     <entry file="file://$PROJECT_DIR$/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/build.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
         </state>
       </provider>
     </entry>
