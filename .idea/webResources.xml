@@ -8,6 +8,7 @@
             <path value="file://$PROJECT_DIR$/src" />
             <path value="file://$PROJECT_DIR$/config" />
             <path value="file://$PROJECT_DIR$/tools" />
+            <path value="file://$PROJECT_DIR$/scripts" />
           </resourceRoots>
         </entryData>
       </entry>
