@@ -1,11 +1,13 @@
 import {BuildUtils} from 'that-build-library';
 
 BuildUtils
-	.exec('TESTING', 'istanbul', [
-		'cover',
-		'--config',
-		'.istanbul.yml',
-		'--include-all-sources',
+	.exec('TESTING', 'nyc', [
+		'--reporter', 'html',
+		'--reporter', 'text',
+		'--report-dir', './coverage',
+		'--temp-directory', './coverage/tmp',
+		'--exclude', 'src/*.spec.js',
+		'--include', 'src/*.js',
 		'node_modules/.bin/jasmine',
 		'src/*.spec.js',
 		'src/**/*.spec.js'

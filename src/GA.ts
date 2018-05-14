@@ -5,64 +5,70 @@ import {GACitizen} from './GACitizen';
 	evolving citizens to reach a higher and higher level
 	of fitness.
  */
-export class GA<T extends GACitizen> {
-
-	// The current best fitness for the entire population
-	fitness: number = 0;
-
-	// The current fittest citizen within the population
-	fittest: GACitizen;
-
-	// The current generation
-	generationCount: number = 0;
-
-	// The mutation rate for the evolutionary process
-	// (i.e. what proportion of a citizen's genotype will mutate)
-	mutationRate: number = 0.01;
-
-	// The survival rate for the evolutionary process
-	// (i.e. what proportion of the generation will survive into the next generation)
-	survivalRate: number = 0.1;
-
-	// How do we record the fitness of a citizen
-	private fitnessFunction: (a: T) => number;
-
-	// Our current population of citizens
-	private population: Array<T> = [];
+export class GA {
 
 	// Constructor
-	constructor(fitnessFunction: (a: T) => number) {
-		this.fitnessFunction = fitnessFunction;
+	//      calcFitness - provide a measure (0 - 1) of how well a citizen performs
+	constructor(
+		private calcFitness: (citizen: GACitizen) => number
+	) {
 		this.reset();
 	}
 
+	// The fitness of the current fittest citizen
+	//      (based on the fact that the population is sorted by descending fitness)
+	get fitness(): number {
+		return this.population.length ? this.calcFitness(this.population[0]) : 0;
+	}
+
+	// The current fittest citizen within the population
+	//      (based on the fact that the population is sorted by descending fitness)
+	get fittest(): GACitizen {
+		return this.population.length ? this.population[0] : null;
+	}
+
+	// The current generation
+	generation: number = 0;
+
+	// The mutation rate for the evolutionary process
+	//      A numeric value between 0 and 1
+	//      (i.e. what proportion of a citizen's genotype will mutate)
+	mutationRate: number = 0.01;
+
+	// The survival rate for the evolutionary process
+	//      A numeric value between 0 and 1
+	//      (i.e. what proportion of the generation will survive into the next generation)
+	survivalRate: number = 0.1;
+
+	// The current population of citizens in the gene pool
+	private population: Array<GACitizen> = [];
+
 	// Add a citizen to our population
-	add(citizen: T) {
+	add(citizen: GACitizen) {
 		this.population.push(citizen);
 	}
 
 	// Clear the evolutionary process
 	reset() {
 		this.population = [];
-		this.generationCount = 0;
-		this.fitness = 0;
+		this.generation = 0;
 	}
 
 	// Sort the population by the fitness of the citizens
 	sort() {
-		this.population.sort((a: T, b: T) => {
-			return this.fitnessFunction(b) - this.fitnessFunction(a);
+		this.population.sort((a: GACitizen, b: GACitizen) => {
+			return this.calcFitness(b) - this.calcFitness(a);
 		});
 	}
 
 	// Run the evolutionary process for a single generation
 	evolve() {
-		let nextPopulation: Array<T> = [];
+		let nextPopulation: Array<GACitizen> = [];
 		let populationSize = this.population.length;
 
 		// Create Breeding Pool
-		let breeders: Array<T> = [];
-		this.population.forEach((citizen: T, idx: number) => {
+		let breeders: Array<GACitizen> = [];
+		this.population.forEach((citizen: GACitizen, idx: number) => {
 			Array(populationSize - idx).forEach(() => {
 				breeders.push(citizen);
 			});
@@ -90,19 +96,17 @@ export class GA<T extends GACitizen> {
 		// Sort
 		this.sort();
 
-		// Calc New Fitness
-		this.fitness = this.population.length ? this.fitnessFunction(this.population[0]) : 0;
-		this.fittest = this.population.length ? this.population[0] : null;
-		this.generationCount++;
+		// Done
+		this.generation++;
 	}
 
 	// Breed citizen A with citizen B
-	private breed(a: T, b: T): T {
-		return <T> a.mateWith(b);
+	private breed(a: GACitizen, b: GACitizen): GACitizen {
+		return <GACitizen> a.mateWith(b);
 	}
 
 	// Mutate citizen A
-	private mutate(a: T): T {
+	private mutate(a: GACitizen): GACitizen {
 		a.mutate(this.mutationRate);
 		return a;
 	}

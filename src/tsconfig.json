@@ -3,7 +3,8 @@
 	"compilerOptions": {
 		"rootDir": "./",
 		"target": "es5",
-		"sourceMap": false,
+		"inlineSourceMap": true,
+		"inlineSources": true,
 		"moduleResolution": "node",
 		"types": [
 			"jasmine",

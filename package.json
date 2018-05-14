@@ -21,16 +21,15 @@
     },
     "dependencies": {},
     "devDependencies": {
-        "that-build-library": "^0.0.4",
         "@types/jasmine": "~2.8.3",
         "@types/jasminewd2": "~2.0.2",
         "@types/node": "~6.0.60",
-        "istanbul": "^0.4.5",
-        "node-sass": "^4.8.3",
         "jasmine": "^3.1.0",
         "jasmine-core": "~2.8.0",
         "jasmine-spec-reporter": "~4.2.1",
-        "tslint": "~5.9.1",
-        "typescript": "~2.5.3"
+        "nyc": "^11.7.3",
+        "that-build-library": "^0.0.4",
+        "tslint": "^5.10.0",
+        "typescript": "^2.8.3"
     }
 }
