@@ -26,7 +26,9 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: npm install
+      - run:
+          name: Install Project
+          command: npm install
 
       - save_cache:
           paths:
@@ -34,14 +36,20 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # build in preperation for CI
-      - run: npm run build:scripts
+      - run:
+          name: Build Scripts
+          command: npm run build:scripts
 
       # run tests!
-      - run: npm test
+      - run:
+          name: Test Project
+          command: npm test
 
       # copy Cover to artifacts
-      - run: mkdir $CIRCLE_ARTIFACTS/coverage
-      - run: cp -R coverage/* $CIRCLE_ARTIFACTS/coverage/
+      - store_artifacts:
+          path: /coverage
 
       # integrate with CodeCov
-      - run: bash <(curl -s https://codecov.io/bash)
+      - run:
+          name: Commit to CodeCov
+          command: bash <(curl -s https://codecov.io/bash)
