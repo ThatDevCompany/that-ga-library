@@ -39,5 +39,9 @@ jobs:
       # run tests!
       - run: npm test
 
+      # copy Cover to artifacts
+      - mkdir $CIRCLE_ARTIFACTS
+      - cp -R coverage/* $CIRCLE_ARTIFACTS
+
       # integrate with CodeCov
       - bash <(curl -s https://codecov.io/bash)
