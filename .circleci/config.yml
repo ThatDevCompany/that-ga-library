@@ -45,9 +45,17 @@ jobs:
           name: Test Project
           command: npm test
 
+      # create Code Coverage Artifacts
+      - run:
+          name: Create Code Coverage Artifacts
+          command: |
+            mkdir -p /tmp/coverage
+            cp coverage/* /tmp/coverage
+
+
       # copy Cover to artifacts
       - store_artifacts:
-          path: /coverage
+          path: /tmp/coverage
 
       # integrate with CodeCov
       - run:
