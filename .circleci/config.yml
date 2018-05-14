@@ -43,13 +43,4 @@ jobs:
       # run tests!
       - run:
           name: Test Project
-          command: npm test
-
-      # integrate with CodeCov
-      - run:
-          name: Install CodeCov
-          command: npm install codecov
-
-      - run:
-          name: Commit to CodeCov
-          command: node_modules/.bin/codecov
+          command: npm test-codecov
