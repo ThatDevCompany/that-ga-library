@@ -15,18 +15,6 @@ export class GA {
 		this.reset();
 	}
 
-	// The fitness of the current fittest citizen
-	//      (based on the fact that the population is sorted by descending fitness)
-	get fitness(): number {
-		return this.population.length ? this.calcFitness(this.population[0]) : 0;
-	}
-
-	// The current fittest citizen within the population
-	//      (based on the fact that the population is sorted by descending fitness)
-	get fittest(): GACitizen {
-		return this.population.length ? this.population[0] : null;
-	}
-
 	// The current generation
 	generation: number = 0;
 
@@ -41,22 +29,35 @@ export class GA {
 	survivalRate: number = 0.1;
 
 	// The current population of citizens in the gene pool
-	private population: Array<GACitizen> = [];
+	private _population: Array<GACitizen> = [];
+	set population(v: Array<GACitizen>) {
+		this._population = [].concat(v);
+	}
+	get population(): Array<GACitizen> {
+		return this._population;
+	}
 
-	// Add a citizen to our population
-	add(citizen: GACitizen) {
-		this.population.push(citizen);
+	// The fitness of the current fittest citizen
+	//      (based on the fact that the population is sorted by descending fitness)
+	get fitness(): number {
+		return this._population.length ? this.calcFitness(this._population[0]) : 0;
+	}
+
+	// The current fittest citizen within the population
+	//      (based on the fact that the population is sorted by descending fitness)
+	get fittest(): GACitizen {
+		return this._population.length ? this._population[0] : null;
 	}
 
 	// Clear the evolutionary process
 	reset() {
-		this.population = [];
+		this._population = [];
 		this.generation = 0;
 	}
 
 	// Sort the population by the fitness of the citizens
 	sort() {
-		this.population.sort((a: GACitizen, b: GACitizen) => {
+		this._population.sort((a: GACitizen, b: GACitizen) => {
 			return this.calcFitness(b) - this.calcFitness(a);
 		});
 	}
@@ -64,19 +65,20 @@ export class GA {
 	// Run the evolutionary process for a single generation
 	evolve() {
 		let nextPopulation: Array<GACitizen> = [];
-		let populationSize = this.population.length;
+		let populationSize = this._population.length;
 
 		// Create Breeding Pool
 		let breeders: Array<GACitizen> = [];
-		this.population.forEach((citizen: GACitizen, idx: number) => {
-			Array(populationSize - idx).forEach(() => {
+		this._population.forEach((citizen: GACitizen, idx: number) => {
+			// The fitter the citizen, the more often they appear in the breeders array
+			for (let i = 0; i < populationSize - idx; i++) {
 				breeders.push(citizen);
-			});
+			}
 		});
 
 		// Keep the Best
 		let noToKeep = Math.ceil(populationSize * this.survivalRate);
-		nextPopulation = nextPopulation.concat(this.population.slice(0, noToKeep));
+		nextPopulation = nextPopulation.concat(this._population.slice(0, noToKeep));
 
 		// Breed the Rest
 		for (let i = 0; i < (populationSize - noToKeep); i++) {
@@ -91,7 +93,7 @@ export class GA {
 		}
 
 		// Complete
-		this.population = nextPopulation;
+		this._population = nextPopulation;
 
 		// Sort
 		this.sort();

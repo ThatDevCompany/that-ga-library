@@ -4,14 +4,14 @@
  */
 export interface GACitizen {
 
-    /**
-     * The main method of Evolution - creating children
-     * through reproduction with another citizen
-     */
-    mateWith: (other: GACitizen) => GACitizen;
+	/**
+	 * The main method of Evolution - creating children
+	 * through reproduction with another citizen
+	 */
+	mateWith: (other: GACitizen) => GACitizen;
 
-    /**
-     * The random mutation function
-     */
-    mutate: (mutationRate: number) => void;
+	/**
+	 * The random mutation function
+	 */
+	mutate: (mutationRate: number) => void;
 }
