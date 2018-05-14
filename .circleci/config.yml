@@ -48,8 +48,8 @@ jobs:
       # integrate with CodeCov
       - run:
           name: Install CodeCov
-          command: npm install -g codecov
+          command: npm install codecov
 
       - run:
           name: Commit to CodeCov
-          command: codecov
+          command: node_modules/.bin/codecov
