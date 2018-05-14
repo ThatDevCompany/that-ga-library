@@ -16,7 +16,7 @@
         "build:scripts": "tsc -p scripts/tsconfig.json",
         "build:tests": "tsc -p src/tsconfig.json",
         "build": "node scripts/build.js",
-        "test:codedev": "npm run build:tests && node scripts/test_codecov.js",
+        "test:codecov": "npm run build:tests && node scripts/test_codecov.js",
         "test": "npm run build:tests && node scripts/test.js",
         "publish": "node scripts/publish.js"
     },
