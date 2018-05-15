@@ -1,4 +1,8 @@
 # That GA Library
+
+[![CircleCI](https://circleci.com/gh/ThatDevCompany/that-ga-library/tree/master.svg?style=svg)](https://circleci.com/gh/ThatDevCompany/that-ga-library/tree/master)
+[![codecov](https://codecov.io/gh/ThatDevCompany/that-ga-library/branch/master/graph/badge.svg)](https://codecov.io/gh/ThatDevCompany/that-ga-library)
+
 A Genetic Algorithm library for Typescript
 
 #### Package Contents
