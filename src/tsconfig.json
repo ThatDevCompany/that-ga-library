@@ -8,7 +8,6 @@
 		"moduleResolution": "node",
 		"types": [
 			"jasmine",
-			"jasminewd2",
 			"node"
 		],
 		"typeRoots": [

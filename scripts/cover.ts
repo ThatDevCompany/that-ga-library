@@ -1,5 +1,5 @@
 import {BuildUtils} from 'that-dev-library';
 
 BuildUtils
-	.exec('LINTING', 'tslint', ['-p', 'src/tsconfig.json', '--fix'])
+	.exec('SENDING TO CODECOV', 'codecov', [])
 	.subscribe();
