@@ -16,10 +16,4 @@ export interface GACitizen {
 	mutate(mutationRate: number): void;
 }
 
-/**
- * Abstract implementation of the GACitizen Interface
- */
-export abstract class AbstractGACitizen implements GACitizen {
-	mateWith(other: GACitizen): GACitizen { return null; }
-	mutate(mutationRate: number) {}
-}
+export const GACitizenTest = {}

@@ -13,6 +13,7 @@ BuildUtils
 		'--temp-directory', './coverage/tmp',
 		'--exclude', 'src/**/*.spec.*',
 		'--exclude', 'src/**/index.js',
+		'--exclude', 'src/mocks/*',
 		'--include', 'src/**/*',
 		'node_modules/.bin/jasmine',
 		'src/*.spec.js',
