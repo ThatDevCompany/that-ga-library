@@ -1,7 +1,7 @@
 {
     "name": "that-ga-library",
     "description": "A Microbial Genetic Algorithm library for Typescript",
-    "version": "0.1.3",
+    "version": "0.1.5",
     "license": "MIT",
     "repository": {
         "type": "git",

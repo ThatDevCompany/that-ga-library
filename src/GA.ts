@@ -1,14 +1,34 @@
-import { GACitizen } from './GACitizen'
+/**
+ * GA Service
+ *      Any class which handles all of the domain specific functions of the GA process
+ */
+export interface GAService<T> {
+	/**
+	 * The main method of Evolution - creating children
+	 * by mating two citizens (of type T)
+	 */
+	mate(a: T, b: T): T
 
-/*
+	/**
+	 * Mutate a citizen (of type T) by a specific mutationRate
+	 */
+	mutate(citizen: T, mutationRate?: number): T
+
+	/**
+	 * The fitness function, what is the fitness of a given citizen (of type T)
+	 */
+	fitness: (citizen: T, ...args: any[]) => number
+}
+
+/**
 	The GA class provides the evolutionary framework for
 	evolving citizens to reach a higher and higher level
 	of fitness.
  */
-export class GA {
+export class GA<T> {
 	// Constructor
 	//      calcFitness - provide a measure (0 - 1) of how well a citizen performs
-	constructor(private calcFitness: (citizen: GACitizen) => number) {
+	constructor(private ga: GAService<T>) {
 		this.reset()
 	}
 
@@ -26,23 +46,23 @@ export class GA {
 	survivalRate: number = 0.1
 
 	// The current population of citizens in the gene pool
-	private _population: Array<GACitizen> = []
-	set population(v: Array<GACitizen>) {
+	private _population: Array<T> = []
+	set population(v: Array<T>) {
 		this._population = [].concat(v)
 	}
-	get population(): Array<GACitizen> {
+	get population(): Array<T> {
 		return this._population
 	}
 
 	// The fitness of the current fittest citizen
 	//      (based on the fact that the population is sorted by descending fitness)
 	get fitness(): number {
-		return this._population.length ? this.calcFitness(this._population[0]) : 0
+		return this._population.length ? this.ga.fitness(this._population[0]) : 0
 	}
 
 	// The current fittest citizen within the population
 	//      (based on the fact that the population is sorted by descending fitness)
-	get fittest(): GACitizen {
+	get fittest(): T {
 		return this._population.length ? this._population[0] : null
 	}
 
@@ -54,19 +74,19 @@ export class GA {
 
 	// Sort the population by the fitness of the citizens
 	sort() {
-		this._population.sort((a: GACitizen, b: GACitizen) => {
-			return this.calcFitness(b) - this.calcFitness(a)
+		this._population.sort((a: T, b: T) => {
+			return this.ga.fitness(b) - this.ga.fitness(a)
 		})
 	}
 
 	// Run the evolutionary process for a single generation
 	evolve() {
-		let nextPopulation: Array<GACitizen> = []
+		let nextPopulation: Array<T> = []
 		let populationSize = this._population.length
 
 		// Create Breeding Pool
-		let breeders: Array<GACitizen> = []
-		this._population.forEach((citizen: GACitizen, idx: number) => {
+		let breeders: Array<T> = []
+		this._population.forEach((citizen: T, idx: number) => {
 			// The fitter the citizen, the more often they appear in the breeders array
 			for (let i = 0; i < populationSize - idx; i++) {
 				breeders.push(citizen)
@@ -80,11 +100,12 @@ export class GA {
 		// Breed the Rest
 		for (let i = 0; i < populationSize - noToKeep; i++) {
 			nextPopulation.push(
-				this.mutate(
-					this.breed(
+				this.ga.mutate(
+					this.ga.mate(
 						breeders[Math.floor(Math.random() * breeders.length)],
 						breeders[Math.floor(Math.random() * breeders.length)]
-					)
+					),
+					this.mutationRate
 				)
 			)
 		}
@@ -97,16 +118,5 @@ export class GA {
 
 		// Done
 		this.generation++
-	}
-
-	// Breed citizen A with citizen B
-	private breed(a: GACitizen, b: GACitizen): GACitizen {
-		return <GACitizen>a.mateWith(b)
-	}
-
-	// Mutate citizen A
-	private mutate(a: GACitizen): GACitizen {
-		a.mutate(this.mutationRate)
-		return a
 	}
 }
